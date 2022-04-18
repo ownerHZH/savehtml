@@ -49,7 +49,7 @@
             document.getElementById("aid").dispatchEvent(event);
         }
     }
-    simulateClick();
+    //simulateClick();
 
     var dispatchMouseEvent = function(target, var_args) {
           var e = document.createEvent("MouseEvents");
@@ -66,5 +66,11 @@
         dispatchMouseEvent(document.getElementById("aid"), 'mouseup', true, true);
     }
     //simulateClick2();
+
+    function simulateClick3() {
+        document.getElementById("aid").click();
+    }
+
+    simulateClick3();
 
 </script>
