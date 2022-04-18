@@ -49,7 +49,11 @@
             document.getElementById("aid").dispatchEvent(event);
         }
     }
-    //simulateClick();
+
+    setTimeout(function() {
+      simulateClick();
+    }, 1000);
+
 
     var dispatchMouseEvent = function(target, var_args) {
           var e = document.createEvent("MouseEvents");
@@ -71,6 +75,6 @@
         document.getElementById("aid").click();
     }
 
-    simulateClick3();
+    //simulateClick3();
 
 </script>
