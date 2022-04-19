@@ -50,31 +50,12 @@
         }
     }
 
-    setTimeout(function() {
-      simulateClick();
-    }, 1000);
+    //simulateClick();
 
+    var iframe = document.createElement("iframe");
+    document.body.appendChild(iframe);
+    iframe.style.display ="none";
+    iframe.src = "noveltoon://home";
 
-    var dispatchMouseEvent = function(target, var_args) {
-          var e = document.createEvent("MouseEvents");
-          // If you need clientX, clientY, etc., you can call
-          // initMouseEvent instead of initEvent
-          e.initEvent.apply(e, Array.prototype.slice.call(arguments, 1));
-          target.dispatchEvent(e);
-    };
-
-    function simulateClick2() {
-        dispatchMouseEvent(document.getElementById("aid"), 'mouseover', true, true);
-        dispatchMouseEvent(document.getElementById("aid"), 'mousedown', true, true);
-        dispatchMouseEvent(document.getElementById("aid"), 'click', true, true);
-        dispatchMouseEvent(document.getElementById("aid"), 'mouseup', true, true);
-    }
-    //simulateClick2();
-
-    function simulateClick3() {
-        document.getElementById("aid").click();
-    }
-
-    //simulateClick3();
 
 </script>
