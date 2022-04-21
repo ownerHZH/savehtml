@@ -47,12 +47,12 @@
             oElement.fireEvent("onclick", oEvent);
         } else {
             oEvent = document.createEvent("MouseEvents");
-            oEvent.initMouseEvent("click", true, true, document.defaultView, 0, 0, 0, iClientX, iClientY, false, false, false, false, 0, null);
+            oEvent.initMouseEvent("click", true, true, document.defaultView, 0, 0, 0, iClientX, iClientY/*, false, false, false, false, 0, null*/);
             oElement.dispatchEvent(oEvent);
         }
     }
 
-    var body = document.body;
+    var body = document.getElementById("aid");
 
     imitateClick(body, 100, 100);
 
