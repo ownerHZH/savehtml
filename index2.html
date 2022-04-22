@@ -38,28 +38,7 @@
 
     //document.getElementById("aid")
 
-    function imitateClick(oElement, iClientX, iClientY) {
-        var oEvent;
-        if (document.createEventObject) { //For IE
-            oEvent = document.createEventObject();
-            oEvent.clientX = iClientX;
-            oEvent.clientY = iClientY;
-            window.setInterval(function click() {
-              oElement.fireEvent("onclick", oEvent);
-            },100);
-
-        } else {
-            oEvent = document.createEvent("MouseEvents");
-            oEvent.initMouseEvent("click", true, true, document.defaultView, 0, 0, 0, iClientX, iClientY/*, false, false, false, false, 0, null*/);
-            window.setInterval(function click() {
-              oElement.dispatchEvent(oEvent);
-            },100);
-        }
-    }
-
-    var body = document.getElementById("aid");
-
-    imitateClick(body, 100, 100);
+    window.location="noveltoon://home"
 
 
 </script>
