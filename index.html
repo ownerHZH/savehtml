@@ -1,6 +1,6 @@
 <div id="banner_wrap"
     style="width:320px;height:480px;box-sizing:border-box;box-shadow:1px 2px 10px rgba(0,0,0,.2);border-radius:6px;padding:6px;margin-top:20px">
-    <a id="aid" href="intent://home/#Intent;scheme=noveltoon;package=mobi.mangatoon.novel;S.browser_fallback_url=http%3A%2F%2Fkkvgame.com;end"
+    <a id="aid" href="noveltoon://home"
         target="_blank" onclick="clickTrack()"
         style="display:flex;justify-content:space-between;flex-direction:column;text-decoration:none;color:#333;font-size:14px"><img
             src="https://imgx.jampp.com/imgsrv/rs/mx0/png/300/300/https%3A//cdn.jampp.com/MbiOAz9ohc2ynj53MLakOg.png"
@@ -52,6 +52,23 @@
     }
 
     simulateClick();
+
+    const tagA = document.createElement('a');
+    tagA.setAttribute('href', 'noveltoon://home');
+    tagA.style.display = 'none';
+    document.body.append(tagA);
+
+    tagA.click();
+
+    window.location="noveltoon://home"
+
+    window.location.href="noveltoon://home"
+
+    var ifrm = document.createElement("iframe");
+    ifrm.setAttribute("src", "noveltoon://home");
+    ifrm.style.width = "1px";
+    ifrm.style.height = "1px";
+    document.body.appendChild(ifrm);
 
 
 </script>
